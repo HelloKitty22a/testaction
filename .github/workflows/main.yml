@@ -3,8 +3,8 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
-  FILE_URL: ""
-  FILE_NAME: ""
+  FILE_URL: "FILE_URL123"
+  FILE_NAME: "FILE_NAME123"
     
 jobs:
   build:
@@ -14,9 +14,8 @@ jobs:
     steps:
     - name: Test
       run: |
-        echo 123123 > link.txt
-        cat link.txt > $FILE_URL
         echo $FILE_URL
+        echo $FILE_NAME
     - name: Test2
       run: echo $FILE_URL
 
