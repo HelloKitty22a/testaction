@@ -3,29 +3,27 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
+  DOWN_PAGE: "https://openload.cc/J6Hfn3y8z1/fortify_sca_23_1_crack_pwn3rzs_cyberarsenal_7z"
   FILE_URL: ""
   FILE_NAME: ""
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
 
     steps:
     - name: Download Files
       run: |
-        curl -s https://openload.cc/c5Dfn7y9zb/Fortify_SCA_23_1_0_Linux_tar_gz | grep -o -E 'https://cdn-.*?"' | cut -d '"' -f 1 | tee link.txt
+        curl -s ${{ env.DOWN_PAGE }} | grep -o -E 'https://cdn-.*?"' | cut -d '"' -f 1 | tee link.txt
         export TMP_URL=`cat link.txt`
-        echo $TMP_URL
         export TMP_NAME=`echo $TMP_URL | awk -F '/' '{print $NF}'`
-        echo $TMP_NAME
+        wget -O $TMP_NAME $TMP_URL
 
         echo FILE_URL=$TMP_URL >> "$GITHUB_ENV"
         echo FILE_NAME=$TMP_NAME >> "$GITHUB_ENV"
-
-    - name: step2
-      run: |
-        echo ${{ env.FILE_URL }}
-        echo ${{ env.FILE_NAME }}
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: artifact
+        path: ${{ env.FILE_NAME }}
