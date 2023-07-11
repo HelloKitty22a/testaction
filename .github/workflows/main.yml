@@ -17,3 +17,7 @@ jobs:
         export TMP_URL=`cat link.txt`
         echo 'FILE_URL=123123' >> "$GITHUB_ENV"
         echo ${{ env.FILE_URL }}
+
+    -name: step2
+      run:|
+        echo ${{ env.FILE_URL }}
