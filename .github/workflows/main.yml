@@ -16,7 +16,7 @@ jobs:
         curl -s https://openload.cc/c5Dfn7y9zb/Fortify_SCA_23_1_0_Linux_tar_gz | grep -o -E 'https://cdn-.*?"' | cut -d '"' -f 1 | tee link.txt
         export TMP_URL=`cat link.txt`
         echo $TMP_URL
-        echo 'FILE_URL=$TMP_URL' >> "$GITHUB_ENV"
+        echo FILE_URL=$TMP_URL >> "$GITHUB_ENV"
         echo ${{ env.FILE_URL }}
 
     - name: step2
