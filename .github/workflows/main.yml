@@ -18,8 +18,6 @@ jobs:
       run: |
         echo 'https://httpbin.org/image' | tee link.txt
 
-        export TMP_URL=`cat link.txt`
-
-        echo 'FILE_URL=$TMP_URL' >> "$GITHUB_ENV"
+        echo 'FILE_URL=`cat link.txt`' >> "$GITHUB_ENV"
 
         echo ${{ env.FILE_URL }}
