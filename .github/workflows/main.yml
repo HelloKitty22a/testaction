@@ -2,11 +2,13 @@ name: Download from openload.cc
 
 on: [push, workflow_dispatch]
 
+env:
+  FILE_URL: ""
+  FILE_NAME: ""
+    
 jobs:
-  env:
-    FILE_URL: ""
-    FILE_NAME: ""
   build:
+  
 
     runs-on: ubuntu-latest
     steps:
@@ -15,6 +17,6 @@ jobs:
         echo 123123 > link.txt
         cat link.txt > $FILE_URL
         echo $FILE_URL
-    -name: Test2
+    - name: Test2
       run: echo $FILE_URL
 
