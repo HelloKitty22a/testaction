@@ -38,7 +38,7 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
-  DOWN_PAGE: "https://openload.cc/F2ubL2y1z9/rules2023_zip"
+  DOWN_PAGE: "https://openload.cc/w78fn4y0z8/Fortify_SCA_23_1_0_Mac_tar_gz"
   FILE_URL: ""
   FILE_NAME: ""
 
