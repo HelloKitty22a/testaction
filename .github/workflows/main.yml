@@ -18,16 +18,14 @@ jobs:
       run: |
         echo 'https://httpbin.org/image' | tee link.txt
         export TMP_URL=`cat link.txt`
-        echo $TMP_URL
-        echo 'FILE_URL=https://httpbin.org/image' >> "$GITHUB_ENV"
+
+        echo 'FILE_URL=$TMP_URL' >> "$GITHUB_ENV"
         export TMP_NAME=`echo ${{ env.FILE_URL }} | awk -F '/' '{print $NF}'`
         echo "FILE_NAME=$TMP_NAME"  >> "$GITHUB_ENV"
-        echo ${{ env.FILE_URL }}
-        echo ${{ env.FILE_NAME }}
-        curl -OJ ${{ env.FILE_URL }}
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: artifact
-        path: ${{ env.FILE_NAME }}
+        echo ${{ env.FILE_URL }}
+
+        echo 'FILE_URL=ABCD' >> "$GITHUB_ENV"
+        echo ${{ env.FILE_URL }}
+
+
