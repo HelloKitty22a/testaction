@@ -18,6 +18,6 @@ jobs:
         echo 'FILE_URL=123123' >> "$GITHUB_ENV"
         echo ${{ env.FILE_URL }}
 
-    -name: step2
-      run:|
+    - name: step2
+      run: |
         echo ${{ env.FILE_URL }}
