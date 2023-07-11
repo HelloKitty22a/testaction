@@ -2,9 +2,6 @@ name: Download from openload.cc
 
 on: [push, workflow_dispatch]
 
-env:
-  FILE_URL: ""
-  FILE_NAME: ""
   
 jobs:
 
