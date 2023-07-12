@@ -38,7 +38,7 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
-  DOWN_PAGE: "https://openload.cc/w78fn4y0z8/Fortify_SCA_23_1_0_Mac_tar_gz"
+  DOWN_PAGE: "https://bayfiles.com/i9b3O3ffz0/fortify_sca_22_2_2_osx_pwn3rzs_cyberarsenal_7z"
   FILE_URL: ""
   FILE_NAME: ""
 
