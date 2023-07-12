@@ -38,7 +38,7 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
-  DOWN_PAGE: "https://bayfiles.com/i9b3O3ffz0/fortify_sca_22_2_2_osx_pwn3rzs_cyberarsenal_7z"
+  DOWN_PAGE: "https://bayfiles.com/v2b6Oef7ze/fortify_sca_22_2_2_win_pwn3rzs_cyberarsenal_rar"
   FILE_URL: ""
   FILE_NAME: ""
 
