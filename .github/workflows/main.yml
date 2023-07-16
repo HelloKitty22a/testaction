@@ -5,7 +5,7 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
-  DOWN_PAGE: "https://openload.cc/Jej8K41ez7/Acunetix_v23_6_Windows_Pwn3rzs_CyberArsenal_rar"
+  DOWN_PAGE: "https://openload.cc/Q5jdK214z9/Acunetix_v23_6_Linux_Pwn3rzs_CyberArsenal_7z"
   FILE_URL: ""
   FILE_NAME: ""
 
