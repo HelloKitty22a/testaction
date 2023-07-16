@@ -5,7 +5,7 @@ name: Download from openload.cc
 on: [push, workflow_dispatch]
 
 env:
-  DOWN_PAGE: "https://openload.cc/e06dle2cz0/InvictiEnterprise_v23_1_0_zip"
+  DOWN_PAGE: "https://openload.cc/E1w3mb26za/license_nsc"
   FILE_URL: ""
   FILE_NAME: ""
 
